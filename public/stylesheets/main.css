@@ -109,6 +109,11 @@ input, button, select {
 
 /* Disposition générale */
 
+#big_wrapper {
+  margin:auto;
+  width:960px;
+}
+
 #wrapper {
   margin:auto;
   background:white;

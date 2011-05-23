@@ -7,9 +7,12 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="big_wrapper">
       <% flash.each do |key, value| %>
         <p class="flash <%= key %>"><%= value %></p>
       <% end %>
+<img src="/images/logo.png" style="margin:auto; height: 120px;" /><p style="float:right; color: white;">Beta v0.1 Moche</p>
+
 
 <div id="wrapper">
 
@@ -33,7 +36,7 @@
     <% end %>
   </div>
   <%= yield %>
-
+</div>
 </div>
 </body>
 </html>
