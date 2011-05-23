@@ -3,7 +3,7 @@ class CreateBurgers < ActiveRecord::Migration
     create_table :burgers do |t|
       t.string :name
       t.text :description
-      t.string :brand
+      t.integer :brand_id
 
       t.timestamps
     end

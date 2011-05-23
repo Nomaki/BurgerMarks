@@ -1,0 +1,11 @@
+<h1>Bienvenue sur BurgerMarks</h1>
+
+<ul>
+    <li><%= link_to "Top Burger", burgers_path %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to "Ajouter un Burger", new_burger_path %></li>
+  <% else %>
+    <li><%= link_to t("Sign up"), new_user_registration_path %></li>
+    <li><%= link_to t("Sign in"), new_user_session_path %></li>
+  <% end %>
+</ul>

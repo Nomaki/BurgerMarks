@@ -7,36 +7,38 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<% flash.each do |key, value| %>
+  <p class="flash <%= key %>"><%= value %></p>
+<% end %>
+
 <div id="big_wrapper">
-      <% flash.each do |key, value| %>
-        <p class="flash <%= key %>"><%= value %></p>
+
+  <img src="/images/logo.png" style="margin:auto; height: 120px;" /><p style="float:right; color: white;">Beta v0.1 Moche</p>
+
+
+  <div id="wrapper">
+
+    <div id="header">
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+      <img src="/images/burger.png" />
+    </div>
+
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Connecté sur <%= current_user.email %>. Ce n'est pas vous ?
+        <%= link_to "Se déconnecter", destroy_user_session_path %>
+      <% else %>
+        <%= link_to "S'inscrire", new_user_registration_path %> ou <%= link_to "se connecter", new_user_session_path %>
       <% end %>
-<img src="/images/logo.png" style="margin:auto; height: 120px;" /><p style="float:right; color: white;">Beta v0.1 Moche</p>
-
-
-<div id="wrapper">
-
-  <div id="header">
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
-  <img src="/images/burger.png" />
+    </div>
+    <%= yield %>
   </div>
-
-  <div id="user_nav">
-    <% if user_signed_in? %>
-      Connecté sur <%= current_user.email %>. Ce n'est pas vous ?
-      <%= link_to "Se déconnecter", destroy_user_session_path %>
-    <% else %>
-      <%= link_to "S'inscrire", new_user_registration_path %> ou <%= link_to "se connecter", new_user_session_path %>
-    <% end %>
-  </div>
-  <%= yield %>
-</div>
 </div>
 </body>
 </html>

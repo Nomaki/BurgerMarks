@@ -178,3 +178,44 @@ float:left;
   margin-bottom:10px;
   background: #e4b0b1;
 }
+
+
+
+************** Tableau ****************/
+
+table.burger_table {
+    width:85%;
+    margin:auto;
+    border-collapse: collapse;
+}
+
+.burger_table th {
+    background: #222327;
+    color: white;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.burger_table td {
+    border: 1px solid #e4e4e4;
+    width: 15%;
+    text-align: center;
+    margin:auto;
+}
+
+
+.burger_table .burger_user {
+    background: #f1f2f1;
+}
+
+.burger_table .burger_info {
+    background: #f1f2f1;
+}
+
+.burger_table td:hover {
+    background: #f1f2f1;
+}
+
+.burger_table .burger_description {
+    width: 45%;
+}

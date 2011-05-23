@@ -1,4 +1,6 @@
 class BurgersController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new,:create,:update,:edit]
+
   # GET /burgers
   # GET /burgers.xml
   def index
@@ -24,6 +26,7 @@ class BurgersController < ApplicationController
   # GET /burgers/new
   # GET /burgers/new.xml
   def new
+
     @burger = Burger.new
 
     respond_to do |format|
